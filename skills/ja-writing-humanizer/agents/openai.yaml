@@ -1,4 +1,4 @@
 interface:
-  display_name: "日本語 Humanizer"
-  short_description: "日本語のAIっぽい文を自然な文体へ整える。"
-  default_prompt: "Use $ja-writing-humanizer to この日本語下書きを、意味を保ったままAIっぽさの少ない自然な文章に整えてください。"
+  display_name: "Japanese/English Humanizer"
+  short_description: "日本語中心に、英語や日英混在文書のAIっぽい文を自然な文体へ整える。"
+  default_prompt: "Use $ja-writing-humanizer to この日英混在の下書きを、意味と事実を保ったまま、AIっぽさの少ない自然な文章に整えてください。"
