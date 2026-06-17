@@ -1,8 +1,10 @@
 # ja-writing-humanizer
 
-日本語を中心に、英語や日英混在文書でも AI 生成らしい癖を見つけ、意味・事実・文体を保ったまま自然な文章へ整える Agent Skill です。
+日本語を主対象に、英語や日英混在文書の LLM 生成らしい癖を、意味・事実・文体を保ったまま自然な文章へ整える Agent Skill です。
 
-記事、レポート、説明文、社内メモなどの公開前推敲に使えます。文章が「整いすぎている」「抽象的で薄い」「定型句が残っている」と感じるときに、局所修正を中心に読みやすさを戻します。英語で典型的な AI ライクな癖を、日本語の直訳調や表記ゆれとして捉え直す前提で設計しています。
+記事、レポート、説明文、社内メモ、メール、お知らせ、商品説明、SNS 投稿などの推敲に使えます。文章が「整いすぎている」「抽象的で薄い」「同じ言い方を繰り返している」「宣伝調に寄っている」「翻訳調が残っている」と感じるときに、局所修正を中心に読みやすさを戻します。
+
+この skill は技術文書に限りません。AI っぽさ、曖昧さ、冗長さ、表記ゆれ、温度感のずれを抑え、読み手に自然な日本語へ整えることに絞っています。
 
 ## Install
 
@@ -23,7 +25,7 @@ npx skills add viasnake/ja-humanizer --skill ja-writing-humanizer -a codex
 ## Use
 
 ```text
-Use $ja-writing-humanizer to この日英混在の下書きを、意味を保ったまま自然な文章に整えてください。
+Use $ja-writing-humanizer to この下書きの意味と事実を保ったまま、LLM臭さと冗長さを抜いて、自然な日本語に整えてください。
 ```
 
 ## What It Checks
@@ -38,18 +40,12 @@ Use $ja-writing-humanizer to この日英混在の下書きを、意味を保っ
 
 この skill は、単一の兆候だけで AI 生成と断定しません。検出器のスコアにも依存せず、曖昧さ、冗長さ、不正確さを優先して直します。
 
-## References
+## Bundled References
 
-- [Agent Skills specification](https://agentskills.io)
-- [Manage agent skills with GitHub CLI](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)
-- [anthropics/skills](https://github.com/anthropics/skills)
-- [vercel-labs/skills](https://github.com/vercel-labs/skills)
-- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
-- [Wikipedia: WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup)
-- [日本語の表記体系](https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%A1%A8%E8%A8%98%E4%BD%93%E7%B3%BB)
-- [日本語の誤用](https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%AA%A4%E7%94%A8)
-- [ATOK解体新書](https://square.umin.ac.jp/ash/atok8/kaitai.htm)
-- [JustSystems FAQ: 品詞の種類](https://support.justsystems.com/faq/1032/app/servlet/qadoc?QID=040814)
+- `references/patterns.md`: LLM 臭さ、反復、空句、宣伝調の検出パターン
+- `references/japanese-style.md`: 自然な日本語へ整えるための語感、表記、敬語、句読点の観点
+- `references/cases.md`: お知らせ、メール、記事、商品説明、SNS 投稿などの用途別ケース
+- `references/language-foundations.md`: 文法、語彙、かな・漢字、読解の土台から確認する観点
 
 ## License
 
